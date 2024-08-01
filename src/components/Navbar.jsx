@@ -8,8 +8,8 @@ export default function Navbar() {
     return (
         <nav class='flex items-center lg:h-16 lg:p-0'>
             <menu class='container mx-auto flex flex-col gap-4 border border-t-0 p-4 pt-0 lg:h-16 lg:flex-row lg:items-center lg:gap-0 lg:py-0'>
-                <ul class='flex flex-col items-center gap-4 lg:me-auto lg:flex-row lg:gap-0'>
-                    <li class='flex items-center font-black text-white'>
+                <ul class='flex flex-col gap-4 lg:me-auto lg:flex-row lg:items-center lg:gap-0'>
+                    <li class='flex items-center text-white'>
                         <Hyperlink
                             type='navbar-brand'
                             href='https://oregon.public.law/'

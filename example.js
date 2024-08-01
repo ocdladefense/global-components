@@ -1,7 +1,3 @@
-
-
-// Babel and webpack can import (interpolate) JSON directly into our repo.
-import toc from 'data/fsm/toc.json';
-import sections from 'data/ors/chapter-1/sections.json';
-
-
+// Babel and Webpack can import (interpolate) JSON directly into our repository.
+import chapters from 'data/fsm/chapters.json';
+import items from 'data/books-online/sidebar_left/items.json';

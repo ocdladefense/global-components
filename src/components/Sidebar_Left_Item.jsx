@@ -2,7 +2,7 @@
 /* eslint-disable-next-line no-unused-vars */
 import { vNode } from '@ocdla/view';
 
-export default function ItemPage({ active, href, heading, body }) {
+export default function Sidebar_Left_Item({ active, href, heading, body }) {
     let a;
     let h1;
     let p;
@@ -24,12 +24,10 @@ export default function ItemPage({ active, href, heading, body }) {
     return (
         <li>
             <a
-                class={`flex border-b px-4 py-2 ${a}`}
+                class={`flex flex-col gap-2 border-b px-4 py-2 ${a}`}
                 href={href}>
-                <small>
-                    <h1 class={`text-xl font-bold ${h1}`}>{heading}</h1>
-                    {body ? <p class={p}>{body}</p> : <></>}
-                </small>
+                <h1 class={`font-bold ${h1}`}>{heading}</h1>
+                {body ? <p class={p}>{body}</p> : <></>}
             </a>
         </li>
     );

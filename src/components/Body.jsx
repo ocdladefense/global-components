@@ -29,7 +29,7 @@ export default function Body({ type }) {
     };
 
     return (
-        <main class='flex flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:p-8'>
+        <main class='flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8'>
             {type === 'books-online' ? (
                 <div class='flex flex-col gap-4'>
                     <h1 class='text-3xl font-bold'>
@@ -44,10 +44,11 @@ export default function Body({ type }) {
                     </p>
                     <h1 class='text-3xl font-bold'>Chapter 1 - Introduction</h1>
                     <p class='flex items-center gap-2'>
+                        <div>Created by:</div>{' '}
                         <Hyperlink
                             type='standard'
                             href='/'
-                            body='Jesse Wm. Barton 🖉'
+                            body='Jesse Wm. Barton'
                         />
                     </p>
                     <div class='flex gap-4'>
@@ -70,22 +71,23 @@ export default function Body({ type }) {
                         determinate sentencing system. The differences between
                         indeterminate and determinate sentencing systems are
                         discussed later in this chapter. Under either system:
-                        <blockquote class='m-8 border-l-8 border-blue-400 p-4'>
-                            ORS 138.005(5)(a)-(b) (5) “Sentence” means all legal
-                            consequences established or imposed by the trial
-                            court after conviction of an offense, including but
-                            not limited to: (a) Forfeiture, imprisonment,
-                            cancellation of license, removal from office,
-                            monetary obligation, probation, conditions of
-                            probation, discharge, restitution and community
-                            service; and (b) Suspension of imposition or
-                            execution of any part of a sentence, extension of a
-                            period of probation, imposition of a new or modified
-                            condition of probation or of sentence suspension,
-                            and imposition or execution of a sentence upon
-                            revocation of probation or sentence suspension. [ORS
-                            558.35; ORS 529.1]
-                        </blockquote>
+                    </p>
+                    <blockquote class='m-0 border border-l-8 border-neutral-200 border-l-blue-400 bg-blue-50 p-4 lg:mx-8'>
+                        ORS 138.005(5)(a)-(b) (5) “Sentence” means all legal
+                        consequences established or imposed by the trial court
+                        after conviction of an offense, including but not
+                        limited to: (a) Forfeiture, imprisonment, cancellation
+                        of license, removal from office, monetary obligation,
+                        probation, conditions of probation, discharge,
+                        restitution and community service; and (b) Suspension of
+                        imposition or execution of any part of a sentence,
+                        extension of a period of probation, imposition of a new
+                        or modified condition of probation or of sentence
+                        suspension, and imposition or execution of a sentence
+                        upon revocation of probation or sentence suspension.
+                        [ORS 558.35; ORS 529.1]
+                    </blockquote>
+                    <p>
                         See also State v. Trice, 146 Or App 15, 19, 933 P2d 345,
                         rev den, 325 Or 280 (1997) (“[t]he term ‘sentence’ is
                         generally defined as ‘the judgment passed by a court or
@@ -118,7 +120,7 @@ export default function Body({ type }) {
                         § 1-1. OAR 213-002-0001 STATEMENT OF PURPOSES AND
                         PRINCIPLES.
                     </h1>
-                    <blockquote class='mx-8 border-l-8 border-blue-400 p-4 font-thin'>
+                    <blockquote class='m-0 border border-l-8 border-neutral-200 border-l-blue-400 bg-blue-50 p-4 lg:mx-8'>
                         213-002-0001Statement of Purposes and Principles (1) The
                         primary objectives of sentencing are to punish each
                         offender appropriately, and to insure the security of
@@ -220,7 +222,7 @@ export default function Body({ type }) {
                         See, e.g., State v. Baker, 328 Or 355, 364, 976 P2d 1132
                         (1999).
                     </p>
-                    <blockquote class='border-l-4 border-yellow-400 bg-blue-50 p-4'>
+                    <blockquote class='m-0 border border-l-8 border-neutral-200 border-l-yellow-400 bg-blue-50 p-4 lg:mx-8'>
                         Practice Tip The terms “reformation” and
                         “rehabilitation” are interchangeable. When relying on
                         Article I, section 15’s reformation principle, defense

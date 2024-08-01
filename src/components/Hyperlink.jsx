@@ -3,12 +3,13 @@
 import { vNode } from '@ocdla/view';
 
 export default function Hyperlink({ type, extraClasses, href, body }) {
+    const baseStyle =
+        'hover:underline-blue-500 text-blue-400 hover:opacity-[67.5%] hover:underline hover:underline-offset-2';
     let classes;
 
     switch (type) {
         case 'standard':
-            classes =
-                'hover:underline-blue-500 text-blue-400 hover:opacity-[67.5%] hover:underline hover:underline-offset-2';
+            classes = baseStyle;
             break;
         case 'navbar-link':
             classes =
@@ -23,11 +24,14 @@ export default function Hyperlink({ type, extraClasses, href, body }) {
             break;
         case 'navbar-button-feedback':
             classes =
-                'bg-blue-600 hover:bg-blue-500 text-white border-blue-600 hover:border-blue-500 px-4 py-2 rounded-md';
+                'bg-neutral-100 hover:bg-neutral-50 text-neutral-500 hover:text-neutral-400 border border-neutral-300 hover:border-neutral-400 px-4 py-2 rounded-md';
             break;
         case 'body-button':
             classes =
                 'border border-blue-600 hover:opacity-[67.5%] text-blue-600 px-4 py-2 rounded-md contrast-[0] saturate-0';
+            break;
+        case 'sidebar_right':
+            classes = `px-4 py-2 flex border-b ${baseStyle}`;
             break;
         case 'footer-social':
             classes = 'hover:opacity-[67.5%]';

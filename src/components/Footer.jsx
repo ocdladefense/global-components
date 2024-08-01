@@ -57,7 +57,7 @@ export default function Footer() {
                             </ul>
                         </li>
                     </ul>
-                    <ul class='text-xs font-thin'>
+                    <ul class='text-[0.625rem] font-thin leading-[0.75rem]'>
                         <li>
                             © 2024 Oregon Criminal Defense Lawyers Association
                         </li>
@@ -69,6 +69,31 @@ export default function Footer() {
                             the sole use of the purchasing member. Files may not
                             be distributed to others.
                         </li>
+                    </ul>
+                    <ul class='text-neutral-300'>
+                        <Hyperlink
+                            type='standard'
+                            href='https://ocdla.org'
+                            body='ocdla.org'
+                        />{' '}
+                        |{' '}
+                        <Hyperlink
+                            type='standard'
+                            href='https://maps.app.goo.gl/7dCYKBEyJbmo8tzS7'
+                            body='101 East 14th Ave, Eugene, OR 97401 '
+                        />{' '}
+                        |{' '}
+                        <Hyperlink
+                            type='standard'
+                            href='mailto:info@ocdla.org'
+                            body='info@ocdla.org'
+                        />{' '}
+                        |{' '}
+                        <Hyperlink
+                            type='standard'
+                            href='tel:541-686-8716'
+                            body='541-686-8716'
+                        />
                     </ul>
                 </li>
                 <li class='text-nowrap'>
