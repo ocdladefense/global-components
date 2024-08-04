@@ -4,13 +4,13 @@ import { vNode } from '@ocdla/view';
 import Hyperlink from './Hyperlink';
 /* eslint-enable */
 
-export default function Sidebar_Right_Item({ type, href, body }) {
+export default function BreadcrumbItem({ text, href, type }) {
     return (
         <li>
             <Hyperlink
-                type={type}
+                text={text}
                 href={href}
-                body={body}
+                type={type}
             />
         </li>
     );

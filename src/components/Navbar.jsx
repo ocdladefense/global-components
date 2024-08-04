@@ -13,7 +13,7 @@ export default function Navbar() {
                         <Hyperlink
                             type='navbar-brand'
                             href='https://oregon.public.law/'
-                            body={
+                            text={
                                 <div class='flex items-center'>
                                     <img
                                         class='h-16'
@@ -27,14 +27,14 @@ export default function Navbar() {
                         <Hyperlink
                             type='navbar-link'
                             href='https://oregon.public.law/rules'
-                            body='Oregon Administrative Rules'
+                            text='Oregon Administrative Rules'
                         />
                     </li>
                     <li class='font-bold'>
                         <Hyperlink
                             type='navbar-link'
                             href='https://oregon.public.law/statutes'
-                            body='Oregon Revised Statutes'
+                            text='Oregon Revised Statutes'
                         />
                     </li>
                 </ul>
@@ -57,7 +57,7 @@ export default function Navbar() {
                             <Hyperlink
                                 type='navbar-dropdown'
                                 href='https://oregon.public.law/users/sign_in'
-                                body='Login'
+                                text='Login'
                             />
                         </div>
                     </li>
@@ -66,7 +66,7 @@ export default function Navbar() {
                         <Hyperlink
                             type='navbar-button-feedback'
                             href='/'
-                            body='Give Feedback'
+                            text='Give Feedback'
                         />{' '}
                     </li>
                 </ul>

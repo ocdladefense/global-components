@@ -14,7 +14,7 @@ export default function Footer() {
                             <Hyperlink
                                 type='brand'
                                 href='https://oregon.public.law/'
-                                body={
+                                text={
                                     <div class='flex items-center'>
                                         <img
                                             class='h-16'
@@ -32,7 +32,7 @@ export default function Footer() {
                                             <Hyperlink
                                                 type='footer-social'
                                                 href='https://www.facebook.com/OregonCriminalDefenseLawyersAssociation/'
-                                                body={
+                                                text={
                                                     <img
                                                         class='size-8'
                                                         src='https://www.ocdla.org/wp-content/themes/wireframe/assets/images/default-facebook-icon.png'
@@ -44,7 +44,7 @@ export default function Footer() {
                                             <Hyperlink
                                                 type='footer-social'
                                                 href='https://twitter.com/oregondefense?lang=en'
-                                                body={
+                                                text={
                                                     <img
                                                         class='size-8'
                                                         src='https://www.ocdla.org/wp-content/themes/wireframe/assets/images/default-twitter-icon.png'
@@ -74,25 +74,25 @@ export default function Footer() {
                         <Hyperlink
                             type='standard'
                             href='https://ocdla.org'
-                            body='ocdla.org'
+                            text='ocdla.org'
                         />{' '}
                         |{' '}
                         <Hyperlink
                             type='standard'
                             href='https://maps.app.goo.gl/7dCYKBEyJbmo8tzS7'
-                            body='101 East 14th Ave, Eugene, OR 97401 '
+                            text='101 East 14th Ave, Eugene, OR 97401 '
                         />{' '}
                         |{' '}
                         <Hyperlink
                             type='standard'
                             href='mailto:info@ocdla.org'
-                            body='info@ocdla.org'
+                            text='info@ocdla.org'
                         />{' '}
                         |{' '}
                         <Hyperlink
                             type='standard'
                             href='tel:541-686-8716'
-                            body='541-686-8716'
+                            text='541-686-8716'
                         />
                     </ul>
                 </li>
@@ -107,21 +107,21 @@ export default function Footer() {
                                     <Hyperlink
                                         type='standard'
                                         href='https://pubs.ocdla.org/directory/members'
-                                        body='Membership Directory'
+                                        text='Membership Directory'
                                     />
                                 </li>
                                 <li>
                                     <Hyperlink
                                         type='standard'
                                         href='https://pubs.ocdla.org/directory/experts'
-                                        body='Expert Directory'
+                                        text='Expert Directory'
                                     />
                                 </li>
                                 <li>
                                     <Hyperlink
                                         type='standard'
                                         href='/'
-                                        body='Online store'
+                                        text='Online store'
                                     />
                                 </li>
                             </ul>
@@ -139,21 +139,21 @@ export default function Footer() {
                                     <Hyperlink
                                         type='standard'
                                         href='https://pubs.ocdla.org/car/list'
-                                        body='Research Criminal Appellate Review'
+                                        text='Research Criminal Appellate Review'
                                     />
                                 </li>
                                 <li>
                                     <Hyperlink
                                         type='standard'
                                         href='https://lod.ocdla.org/'
-                                        body='Library of Defense'
+                                        text='Library of Defense'
                                     />
                                 </li>
                                 <li>
                                     <Hyperlink
                                         type='standard'
                                         href='https://lod.ocdla.org/Public:Subscriptions'
-                                        body='Books Online'
+                                        text='Books Online'
                                     />
                                 </li>
                             </ul>
@@ -171,21 +171,21 @@ export default function Footer() {
                                     <Hyperlink
                                         type='standard'
                                         href='/'
-                                        body='CLEs'
+                                        text='CLEs'
                                     />
                                 </li>
                                 <li>
                                     <Hyperlink
                                         type='standard'
                                         href='/'
-                                        body='Videos'
+                                        text='Videos'
                                     />
                                 </li>
                                 <li>
                                     <Hyperlink
                                         type='standard'
                                         href='/'
-                                        body='Seminars & Events'
+                                        text='Seminars & Events'
                                     />
                                 </li>
                             </ul>

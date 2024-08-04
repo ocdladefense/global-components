@@ -2,7 +2,8 @@
 /* eslint-disable-next-line no-unused-vars */
 import { vNode } from '@ocdla/view';
 
-export default function Hyperlink({ type, extraClasses, href, body }) {
+export default function Hyperlink({ text, href, extraClasses = '', type = 'standard' }) {
+
     const baseStyle =
         'hover:underline-blue-500 text-blue-400 hover:opacity-[67.5%] hover:underline hover:underline-offset-2';
     let classes;
@@ -39,10 +40,6 @@ export default function Hyperlink({ type, extraClasses, href, body }) {
     }
 
     return (
-        <a
-            class={`${classes}${extraClasses ?? ''}`}
-            href={href}>
-            {body}
-        </a>
+        <a class={`${classes}${extraClasses}`} href={href}>{text}</a>
     );
 }
