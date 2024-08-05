@@ -24,7 +24,7 @@ export default function Hyperlink({ type, extraClasses, href, body }) {
             break;
         case 'navbar-button-feedback':
             classes =
-                'bg-neutral-100 hover:bg-neutral-50 text-neutral-500 hover:text-neutral-400 border border-neutral-300 hover:border-neutral-400 px-4 py-2 rounded-md';
+                'bg-neutral-50 hover:bg-transparent text-neutral-500 hover:text-neutral-400 border border-neutral-300 hover:border-neutral-200 px-4 py-2 rounded-md';
             break;
         case 'body-button':
             classes =
@@ -40,7 +40,7 @@ export default function Hyperlink({ type, extraClasses, href, body }) {
 
     return (
         <a
-            class={`${classes}${extraClasses ?? ''}`}
+            class={`${classes ?? ''}${extraClasses ?? ''}`}
             href={href}>
             {body}
         </a>

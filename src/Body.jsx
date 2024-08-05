@@ -15,7 +15,7 @@ export default function Body({ type }) {
 
         Array.from(tabBtns).forEach(
             tabBtn =>
-                (tabBtn.className =
+                (tabBtn.class =
                     tabBtnClicked.target === tabBtn
                         ? styleTabActive
                         : styleTabInactive)
@@ -29,7 +29,9 @@ export default function Body({ type }) {
     };
 
     return (
-        <main class='flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8'>
+        <main
+            id='body'
+            class='flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8'>
             {type === 'books-online' ? (
                 <div class='flex flex-col gap-4'>
                     <h1 class='text-3xl font-bold'>
@@ -44,7 +46,7 @@ export default function Body({ type }) {
                     </p>
                     <h1 class='text-3xl font-bold'>Chapter 1 - Introduction</h1>
                     <p class='flex items-center gap-2'>
-                        <div>Created by:</div>{' '}
+                        <div>Edited by:</div>{' '}
                         <Hyperlink
                             type='standard'
                             href='/'
