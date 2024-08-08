@@ -6,7 +6,7 @@ import Breadcrumbs_Item from './Breadcrumbs_Item';
 
 export default function Breadcrumbs({ items }) {
     return (
-        <section class='container mx-auto flex items-center border border-t-0 p-4 text-black lg:h-16'>
+        <section class='flex items-center border border-t-0 p-4 text-black lg:h-16'>
             <ul class='flex flex-wrap items-center whitespace-pre'>
                 {items.map((item, i) => {
                     const seperatorString =

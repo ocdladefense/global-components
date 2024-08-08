@@ -2,7 +2,7 @@
 /* eslint-disable-next-line no-unused-vars */
 import { vNode } from '@ocdla/view';
 
-export default function Sidebar_Left_Item({ active, href, heading, body }) {
+export default function Sidebar_Left_Item({ active, href, heading, label }) {
     let a;
     let h1;
     let p;
@@ -27,7 +27,7 @@ export default function Sidebar_Left_Item({ active, href, heading, body }) {
                 class={`flex flex-col gap-2 border-b px-4 py-2 ${a}`}
                 href={href}>
                 <h1 class={`font-bold ${h1}`}>{heading}</h1>
-                {body ? <p class={p}>{body}</p> : <></>}
+                {label ? <p class={p}>{label}</p> : <></>}
             </a>
         </li>
     );
