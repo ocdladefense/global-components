@@ -1,17 +1,17 @@
 /** @jsx vNode */
 /* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
-import Hyperlink from './Hyperlink';
+import { baseStyleLink } from './Base_Content';
 /* eslint-enable */
 
-export default function Breadcrumbs_Item({ type, href, label }) {
+export default function Breadcrumbs_Item({ href, label }) {
     return (
         <li>
-            <Hyperlink
-                type={type}
-                href={href}
-                body={label}
-            />
+            <a
+                class={baseStyleLink}
+                href={href || null}>
+                {label}
+            </a>
         </li>
     );
 }

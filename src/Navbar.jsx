@@ -10,14 +10,7 @@ export default function Navbar() {
         <nav class='flex flex-col gap-4 border border-t-0 p-4 pt-0 lg:h-16 lg:flex-row lg:items-center lg:gap-0 lg:py-0'>
             <ul class='flex flex-col gap-4 lg:me-auto lg:flex-row lg:items-center lg:gap-0'>
                 <li class='flex items-center text-white'>
-                    <Logo
-                        href='https://ocdla.org'
-                        divClasses='flex items-center'>
-                        <img
-                            class='h-16'
-                            src='https://ocdla.org/wp-content/uploads/2019/10/cropped-ocdla-logo.png'
-                        />
-                    </Logo>
+                    <Logo type='navbar' />
                 </li>
                 <li>
                     <Hyperlink

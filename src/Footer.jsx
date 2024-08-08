@@ -1,8 +1,9 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 /* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
-import Hyperlink from './Hyperlink';
+import { baseStyleLink, BaseElementLink } from './Base_Content';
 import Logo from './Logo';
+import Social from './Social';
 /* eslint-enable */
 
 export default function Footer({
@@ -16,114 +17,82 @@ export default function Footer({
             <ul class='flex flex-col gap-4 text-nowrap lg:gap-8'>
                 <li>
                     {/* Organization */}
-                    <ul class='flex flex-col gap-8 text-nowrap lg:flex-row lg:gap-16'>
+                    <ul class='flex flex-col gap-1'>
+                        {/* Brand + Social */}
                         <li>
-                            {/* Brand + Social */}
-                            <li>
-                                <ul class='flex flex-col gap-1'>
-                                    <li>
-                                        <ul class='flex items-center gap-1'>
-                                            <li>
-                                                <Logo href='https://ocdla.org'>
-                                                    <img
-                                                        class='-my-2 h-16'
-                                                        src='https://ocdla.org/wp-content/uploads/2019/10/cropped-ocdla-logo.png'
-                                                    />
-                                                </Logo>
-                                            </li>
-                                            {showFacebook ? (
-                                                <li>
-                                                    <Hyperlink
-                                                        type='footer-social'
-                                                        href='https://facebook.com/OregonCriminalDefenseLawyersAssociation/'
-                                                        body={
-                                                            <img
-                                                                class='size-8'
-                                                                src='https://ocdla.org/wp-content/themes/wireframe/assets/images/default-facebook-icon.png'
-                                                                alt='Facebook'
-                                                            />
-                                                        }
-                                                    />
-                                                </li>
-                                            ) : (
-                                                <></>
-                                            )}
-                                            {showTwitter ? (
-                                                <li>
-                                                    <Hyperlink
-                                                        type='footer-social'
-                                                        href='https://twitter.com/oregondefense?lang=en'
-                                                        body={
-                                                            <img
-                                                                class='size-8'
-                                                                src='https://ocdla.org/wp-content/themes/wireframe/assets/images/default-twitter-icon.png'
-                                                                alt='Twitter'
-                                                            />
-                                                        }
-                                                    />
-                                                </li>
-                                            ) : (
-                                                <></>
-                                            )}
-                                        </ul>
-                                    </li>
-                                    {/* Copyright */}
-                                    <li>
-                                        <ul class='text-[0.625rem] font-thin leading-[0.75rem]'>
-                                            <li>
-                                                © 2024 Oregon Criminal Defense
-                                                Lawyers Association
-                                            </li>
-                                            <li class='text-wrap'>
-                                                Oregon Criminal Defense Lawyers
-                                                Association is a 501(c)(3)
-                                                nonprofit educational
-                                                association. Contributions to
-                                                OCDLA may be tax deductible -
-                                                check with your tax advisor.
-                                                Electronic downloads are for the
-                                                sole use of the purchasing
-                                                member. Files may not be
-                                                distributed to others.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    {/* Contact */}
-                                    <li>
-                                        <ul class='text-neutral-300'>
-                                            <Hyperlink
-                                                type='standard'
-                                                href='https://ocdla.org'
-                                                body='ocdla.org'
-                                            />{' '}
-                                            {!useGoogleMapsIFrame ? (
-                                                <>
-                                                    |{' '}
-                                                    <Hyperlink
-                                                        type='standard'
-                                                        href='https://maps.app.goo.gl/7dCYKBEyJbmo8tzS7'
-                                                        body='101 East 14th Ave, Eugene, OR 97401 '
-                                                    />{' '}
-                                                </>
-                                            ) : (
-                                                <></>
-                                            )}
-                                            |{' '}
-                                            <Hyperlink
-                                                type='standard'
-                                                href='mailto:info@ocdla.org'
-                                                body='info@ocdla.org'
-                                            />{' '}
-                                            |{' '}
-                                            <Hyperlink
-                                                type='standard'
-                                                href='tel:+15416868716'
-                                                body='(+1) 541-686-8716'
-                                            />
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
+                            <ul class='flex items-center gap-1'>
+                                <li>
+                                    <Logo type='footer' />
+                                </li>
+                                {showFacebook ? (
+                                    <Social
+                                        show={showFacebook}
+                                        type='facebook'
+                                    />
+                                ) : (
+                                    <></>
+                                )}
+                                {showTwitter ? (
+                                    <Social
+                                        show={showTwitter}
+                                        type='twitter'
+                                    />
+                                ) : (
+                                    <></>
+                                )}
+                            </ul>
+                        </li>
+                        {/* Copyright */}
+                        <li>
+                            <ul class='text-[0.625rem] font-thin leading-[0.75rem]'>
+                                <li>
+                                    © 2024 Oregon Criminal Defense Lawyers
+                                    Association
+                                </li>
+                                <li class='text-wrap'>
+                                    Oregon Criminal Defense Lawyers Association
+                                    is a 501(c)(3) nonprofit educational
+                                    association. Contributions to OCDLA may be
+                                    tax deductible - check with your tax
+                                    advisor. Electronic downloads are for the
+                                    sole use of the purchasing member. Files may
+                                    not be distributed to others.
+                                </li>
+                            </ul>
+                        </li>
+                        {/* Contact */}
+                        <li>
+                            <ul class='text-neutral-300'>
+                                <BaseElementLink
+                                    classes={baseStyleLink}
+                                    href='https://ocdla.org'
+                                    label='ocdla.org'
+                                />{' '}
+                                {!useGoogleMapsIFrame ? (
+                                    <>
+                                        |{' '}
+                                        <BaseElementLink
+                                            classes={baseStyleLink}
+                                            href='https://maps.app.goo.gl/7dCYKBEyJbmo8tzS7'
+                                            label='101 East 14th Ave, Eugene, OR 97401 '
+                                        />{' '}
+                                    </>
+                                ) : (
+                                    <></>
+                                )}
+                                |{' '}
+                                <BaseElementLink
+                                    classes={baseStyleLink}
+                                    href='mailto:info@ocdla.org'
+                                    label='info@ocdla.org'
+                                />{' '}
+                                |{' '}
+                                <BaseElementLink
+                                    classes={baseStyleLink}
+                                    href='tel:+15416868716'
+                                    label='(+1) 541-686-8716'
+                                />
+                            </ul>
                         </li>
                     </ul>
                 </li>
@@ -133,24 +102,24 @@ export default function Footer({
                             <strong>Services</strong>
                         </li>
                         <li>
-                            <Hyperlink
-                                type='standard'
+                            <BaseElementLink
+                                classes={baseStyleLink}
                                 href='https://pubs.ocdla.org/directory/members'
-                                body='Membership Directory'
+                                label='Membership Directory'
                             />
                         </li>
                         <li>
-                            <Hyperlink
-                                type='standard'
+                            <BaseElementLink
+                                classes={baseStyleLink}
                                 href='https://pubs.ocdla.org/directory/experts'
-                                body='Expert Directory'
+                                label='Expert Directory'
                             />
                         </li>
                         <li>
-                            <Hyperlink
-                                type='standard'
+                            <BaseElementLink
+                                classes={baseStyleLink}
                                 href='/'
-                                body='Online store'
+                                label='Online store'
                             />
                         </li>
                     </ul>
@@ -161,24 +130,24 @@ export default function Footer({
                             <strong>Research</strong>
                         </li>
                         <li>
-                            <Hyperlink
-                                type='standard'
+                            <BaseElementLink
+                                classes={baseStyleLink}
                                 href='https://pubs.ocdla.org/car/list'
-                                body='Research Criminal Appellate Review'
+                                label='Research Criminal Appellate Review'
                             />
                         </li>
                         <li>
-                            <Hyperlink
-                                type='standard'
+                            <BaseElementLink
+                                classes={baseStyleLink}
                                 href='https://lod.ocdla.org/'
-                                body='Library of Defense'
+                                label='Library of Defense'
                             />
                         </li>
                         <li>
-                            <Hyperlink
-                                type='standard'
+                            <BaseElementLink
+                                classes={baseStyleLink}
                                 href='https://lod.ocdla.org/Public:Subscriptions'
-                                body='Books Online'
+                                label='Books Online'
                             />
                         </li>
                     </ul>
@@ -189,24 +158,24 @@ export default function Footer({
                             <strong>Resources</strong>
                         </li>
                         <li>
-                            <Hyperlink
-                                type='standard'
+                            <BaseElementLink
+                                classes={baseStyleLink}
                                 href='/'
-                                body='CLEs'
+                                label='CLEs'
                             />
                         </li>
                         <li>
-                            <Hyperlink
-                                type='standard'
+                            <BaseElementLink
+                                classes={baseStyleLink}
                                 href='/'
-                                body='Videos'
+                                label='Videos'
                             />
                         </li>
                         <li>
-                            <Hyperlink
-                                type='standard'
+                            <BaseElementLink
+                                classes={baseStyleLink}
                                 href='/'
-                                body='Seminars & Events'
+                                label='Seminars & Events'
                             />
                         </li>
                     </ul>
