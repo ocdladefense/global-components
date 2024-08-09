@@ -334,7 +334,7 @@ export default function Body({ view, type, html_body_ors_viewer, test }) {
                     </p>
                     <p
                         id='tab-body-2'
-                        class='tab-body flex flex-col gap-4'>
+                        class='tab-body flex hidden flex-col gap-4'>
                         <p>Law Review Citations</p>
                         <p>50 WLR 291 (2014)</p>
                     </p>

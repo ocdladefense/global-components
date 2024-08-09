@@ -4,17 +4,10 @@ import { vNode } from '@ocdla/view';
 import Sidebar_Item from '@ocdla/global-components/src/Sidebar_Item';
 /* eslint-enable */
 
-export default function Sidebar({ sidebarType, items }) {
+export default function Sidebar({ children }) {
     return (
         <aside class='hidden h-[87.5vh] overflow-scroll lg:block'>
-            <ul>
-                {items.map(item => (
-                    <Sidebar_Item
-                        sidebarType={sidebarType}
-                        {...item}
-                    />
-                ))}
-            </ul>
+            <ul>{children}</ul>
         </aside>
     );
 }
