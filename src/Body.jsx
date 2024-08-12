@@ -1,7 +1,8 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 /* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
-import Hyperlink from './Hyperlink';
+import Base_Element_Link from './Base_Content';
+import Folder from './Folder';
 /* eslint-enable */
 
 export default function Body({ view, type, html_body_ors_viewer, test }) {
@@ -82,24 +83,21 @@ export default function Body({ view, type, html_body_ors_viewer, test }) {
                     <h1 class='text-3xl font-bold'>Chapter 1 - Introduction</h1>
                     <p class='flex items-center gap-2'>
                         <div>Edited by:</div>{' '}
-                        <Hyperlink
-                            type='standard'
+                        <Base_Element_Link
                             href='/'
-                            body='Jesse Wm. Barton'
+                            label='Jesse Wm. Barton'
                         />
                     </p>
-                    <div class='flex gap-4'>
-                        <Hyperlink
-                            type='body-button'
+                    <ul class='flex gap-4'>
+                        <Folder
                             href='/'
-                            body='📁 Chapters'
+                            label='📁 Chapters'
                         />
-                        <Hyperlink
-                            type='body-button'
+                        <Folder
                             href='/'
-                            body='📁 References'
+                            label='📁 References'
                         />
-                    </div>
+                    </ul>
                     <p>
                         In 1977, the Oregon Legislature adopted the state’s
                         indeterminate (parole matrix) sentencing system.
@@ -323,10 +321,9 @@ export default function Body({ view, type, html_body_ors_viewer, test }) {
                         <small>
                             <i>
                                 Source: Section 1.001 — State policy for courts,{' '}
-                                <Hyperlink
-                                    type='standard'
+                                <Base_Element_Link
                                     href='https://­oregonlegislature.­gov/bills_laws/ors/ors001.­html'
-                                    body='https://­oregonlegislature.­gov/bills_laws/ors/ors001.­html'
+                                    label='https://­oregonlegislature.­gov/bills_laws/ors/ors001.­html'
                                 />
                             </i>
                         </small>

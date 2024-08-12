@@ -1,7 +1,7 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 /* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
-import BaseElementLink from './Base_Content';
+import Base_Element_Link from './Base_Content';
 /* eslint-enable */
 
 export default function Social({ type }) {
@@ -18,7 +18,7 @@ export default function Social({ type }) {
 
     return (
         <li>
-            <BaseElementLink
+            <Base_Element_Link
                 classes='hover:opacity-[67.5%]'
                 href={href}
                 label={

@@ -4,7 +4,8 @@ import { vNode } from '@ocdla/view';
 
 export default function Logo({ type }) {
     // Default = 'footer'
-    const li = type === 'navbar' ? 'flex items-center text-white' : '';
+    const li =
+        type === 'navbar' ? 'px-4 size-full flex items-center text-white' : '';
     const div = type === 'navbar' ? 'flex items-center' : '';
     const img = type === 'navbar' ? '' : '-my-6';
 

@@ -1,33 +1,35 @@
 /** @jsx vNode */
 /* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
-import Hyperlink from './Hyperlink';
 import Logo from './Logo';
+import Navlink from './Navlink';
+import { Divider_Mobile, Divider_Desktop } from './Dividers';
+import Profile from './Profile';
+import Feedback from './Feedback';
 /* eslint-enable */
 
 export default function Navbar() {
     return (
-        <nav class='flex flex-col gap-4 border border-t-0 p-4 pt-0 lg:h-16 lg:flex-row lg:items-center lg:gap-0 lg:py-0'>
-            <ul class='flex flex-col gap-4 lg:me-auto lg:flex-row lg:items-center lg:gap-0'>
-                <Logo type='navbar' />
-                <li>
-                    <Hyperlink
-                        type='navbar-link'
-                        href='https://oregon.public.law/rules'
-                        body='Oregon Administrative Rules'
-                    />
+        <nav class='flex flex-col border border-0 border-b lg:h-16 lg:flex-row lg:border lg:border-t-0'>
+            <ul class='flex size-full flex-col items-start lg:flex-row lg:items-center'>
+                <li class='size-full lg:size-max'>
+                    <ul class='flex flex-col items-center lg:flex-row'>
+                        <Logo type='navbar' />
+                        <Navlink
+                            href='https://oregon.public.law/rules'
+                            label='Oregon Administrative Rules'
+                        />
+                        <Navlink
+                            active={true}
+                            href='https://oregon.public.law/statutes'
+                            label='Oregon Revised Statutes'
+                        />
+                    </ul>
                 </li>
-                <li class='font-bold'>
-                    <Hyperlink
-                        type='navbar-link'
-                        href='https://oregon.public.law/statutes'
-                        body='Oregon Revised Statutes'
-                    />
-                </li>
-            </ul>
-            <hr class='block lg:hidden' />
-            <ul class='flex flex-row-reverse items-center gap-2 lg:flex-row'>
-                {/* <li>
+                <Divider_Mobile />
+                <li class='size-full lg:ms-auto lg:size-max'>
+                    <ul class='flex size-full flex-row-reverse items-center p-4 lg:flex-row lg:gap-2'>
+                        {/* <li>
                     <search class='rounded-md border border-neutral-300 focus:border-neutral-200'>
                         <input
                             class='w-full px-3 py-2 text-black lg:rounded-lg'
@@ -37,25 +39,16 @@ export default function Navbar() {
                     </search>
                 </li>
                 <li class='hidden text-neutral-300 lg:block'>|</li> */}
-                <li class='group relative ms-auto lg:m-0'>
-                    <button class='peer flex h-[34px] w-[34px] items-center justify-center rounded-full bg-[#516490] p-2 text-white hover:opacity-[67.5%] group-focus-within:opacity-[67.5%]'>
-                        G
-                    </button>
-                    <div class='absolute -left-full top-full z-10 mt-[15px] hidden -translate-x-1/2 flex-col text-nowrap shadow group-focus-within:flex lg:left-1/2'>
-                        <Hyperlink
-                            type='navbar-dropdown'
-                            href='https://oregon.public.law/users/sign_in'
-                            body='Login'
+                        <Profile
+                            bg='bg-[#516490]'
+                            label='G'
                         />
-                    </div>
-                </li>
-                <li class='hidden text-neutral-300 lg:block'>|</li>
-                <li>
-                    <Hyperlink
-                        type='navbar-button-feedback'
-                        href='/'
-                        body='Give Feedback'
-                    />{' '}
+                        <Divider_Desktop />
+                        <Feedback
+                            href='/'
+                            label='Give Feedback'
+                        />
+                    </ul>
                 </li>
             </ul>
         </nav>

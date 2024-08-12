@@ -1,7 +1,7 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 /* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
-import BaseElementLink from './Base_Content';
+import Base_Element_Link from './Base_Content';
 import Logo from './Logo';
 import Social from './Social';
 import Google_Maps from './Google_Maps';
@@ -47,7 +47,7 @@ export default function Footer({
                                             © 2024 Oregon Criminal Defense
                                             Lawyers Association
                                         </li>
-                                        <li class='text-wrap'>
+                                        <li class='size-full text-wrap'>
                                             Oregon Criminal Defense Lawyers
                                             Association is a 501(c)(3) nonprofit
                                             educational association.
@@ -63,14 +63,14 @@ export default function Footer({
                                 {/* Contact */}
                                 <li>
                                     <ul class='text-neutral-300'>
-                                        <BaseElementLink
+                                        <Base_Element_Link
                                             href='https://ocdla.org'
                                             label='ocdla.org'
                                         />{' '}
                                         {!useGoogleMapsIFrame ? (
                                             <>
                                                 |{' '}
-                                                <BaseElementLink
+                                                <Base_Element_Link
                                                     href='https://maps.app.goo.gl/7dCYKBEyJbmo8tzS7'
                                                     label='101 East 14th Ave, Eugene, OR 97401 '
                                                 />{' '}
@@ -79,12 +79,12 @@ export default function Footer({
                                             <></>
                                         )}
                                         |{' '}
-                                        <BaseElementLink
+                                        <Base_Element_Link
                                             href='mailto:info@ocdla.org'
                                             label='info@ocdla.org'
                                         />{' '}
                                         |{' '}
-                                        <BaseElementLink
+                                        <Base_Element_Link
                                             href='tel:+15416868716'
                                             label='(+1) 541-686-8716'
                                         />
@@ -92,29 +92,29 @@ export default function Footer({
                                 </li>
                             </ul>
                         </li>
-                        <li class='w-full'>
-                            <ul class='flex flex-col gap-8 text-nowrap lg:flex-row lg:gap-16'>
+                        <li class='size-full'>
+                            <ul class='flex flex-col gap-8 text-nowrap text-[#516490] lg:flex-row lg:gap-16'>
                                 <li>
                                     <ul class='flex flex-col gap-1'>
                                         <li>
-                                            <p class='tracking-wider'>
+                                            <p class='text-base font-bold'>
                                                 SERVICES
                                             </p>
                                         </li>
                                         <li>
-                                            <BaseElementLink
+                                            <Base_Element_Link
                                                 href='https://pubs.ocdla.org/directory/members'
                                                 label='Membership Directory'
                                             />
                                         </li>
                                         <li>
-                                            <BaseElementLink
+                                            <Base_Element_Link
                                                 href='https://pubs.ocdla.org/directory/experts'
                                                 label='Expert Directory'
                                             />
                                         </li>
                                         <li>
-                                            <BaseElementLink
+                                            <Base_Element_Link
                                                 href='/'
                                                 label='Online store'
                                             />
@@ -124,24 +124,24 @@ export default function Footer({
                                 <li>
                                     <ul class='flex flex-col gap-1'>
                                         <li>
-                                            <p class='tracking-wider'>
+                                            <p class='text-base font-bold'>
                                                 RESEARCH
                                             </p>
                                         </li>
                                         <li>
-                                            <BaseElementLink
+                                            <Base_Element_Link
                                                 href='https://pubs.ocdla.org/car/list'
                                                 label='Research Criminal Appellate Review'
                                             />
                                         </li>
                                         <li>
-                                            <BaseElementLink
+                                            <Base_Element_Link
                                                 href='https://lod.ocdla.org/'
                                                 label='Library of Defense'
                                             />
                                         </li>
                                         <li>
-                                            <BaseElementLink
+                                            <Base_Element_Link
                                                 href='https://lod.ocdla.org/Public:Subscriptions'
                                                 label='Books Online'
                                             />
@@ -151,24 +151,24 @@ export default function Footer({
                                 <li>
                                     <ul class='flex flex-col gap-1'>
                                         <li>
-                                            <p class='tracking-wider'>
+                                            <p class='text-base font-bold'>
                                                 RESOURCES
                                             </p>
                                         </li>
                                         <li>
-                                            <BaseElementLink
+                                            <Base_Element_Link
                                                 href='/'
                                                 label='CLEs'
                                             />
                                         </li>
                                         <li>
-                                            <BaseElementLink
+                                            <Base_Element_Link
                                                 href='/'
                                                 label='Videos'
                                             />
                                         </li>
                                         <li>
-                                            <BaseElementLink
+                                            <Base_Element_Link
                                                 href='/'
                                                 label='Seminars & Events'
                                             />
