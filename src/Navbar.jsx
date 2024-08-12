@@ -4,6 +4,7 @@ import { vNode } from '@ocdla/view';
 import Logo from './Logo';
 import Navlink from './Navlink';
 import { Divider_Mobile, Divider_Desktop } from './Dividers';
+import Search from './Search';
 import Profile from './Profile';
 import Feedback from './Feedback';
 /* eslint-enable */
@@ -28,26 +29,20 @@ export default function Navbar() {
                 </li>
                 <Divider_Mobile />
                 <li class='size-full lg:ms-auto lg:size-max'>
-                    <ul class='flex size-full flex-row-reverse items-center p-4 lg:flex-row lg:gap-2'>
-                        {/* <li>
-                    <search class='rounded-md border border-neutral-300 focus:border-neutral-200'>
-                        <input
-                            class='w-full px-3 py-2 text-black lg:rounded-lg'
-                            type='search'
-                            placeholder='Search'
-                        />
-                    </search>
-                </li>
-                <li class='hidden text-neutral-300 lg:block'>|</li> */}
-                        <Profile
-                            bg='bg-[#516490]'
-                            label='G'
-                        />
-                        <Divider_Desktop />
-                        <Feedback
-                            href='/'
-                            label='Give Feedback'
-                        />
+                    <ul class='flex flex-col-reverse items-start gap-4 p-4 lg:flex-row lg:items-center lg:gap-2 lg:p-0'>
+                        {/* <Search placeholder='Search' />
+                        <Divider_Desktop /> */}
+                        <ul class='flex size-full flex-row-reverse items-center gap-0 lg:flex-row lg:gap-2'>
+                            <Profile
+                                bg='bg-[#516490]'
+                                label='G'
+                            />
+                            <Divider_Desktop />
+                            <Feedback
+                                href='/'
+                                label='Give Feedback'
+                            />
+                        </ul>
                     </ul>
                 </li>
             </ul>
