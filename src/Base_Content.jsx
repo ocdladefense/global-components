@@ -5,12 +5,17 @@ import { vNode } from '@ocdla/view';
 export const baseStyleLink =
     'hover:underline-blue-500 text-blue-400 hover:opacity-[67.5%] hover:underline hover:underline-offset-2';
 
-export const BaseElementLink = ({ classes = baseStyleLink, href, label }) => {
+export default function BaseElementLink({
+    classes = baseStyleLink,
+    extraClasses,
+    href,
+    label
+}) {
     return (
         <a
-            class={classes}
+            class={`${classes}${extraClasses ? ` ${extraClasses}` : ''}`}
             href={href || null}>
             {label}
         </a>
     );
-};
+}

@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
 import Hyperlink from './Hyperlink';
-import { doc } from 'prettier';
 /* eslint-enable */
 
 export default function Body({ view, type, html_body_ors_viewer, test }) {

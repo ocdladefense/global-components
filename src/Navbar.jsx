@@ -9,9 +9,7 @@ export default function Navbar() {
     return (
         <nav class='flex flex-col gap-4 border border-t-0 p-4 pt-0 lg:h-16 lg:flex-row lg:items-center lg:gap-0 lg:py-0'>
             <ul class='flex flex-col gap-4 lg:me-auto lg:flex-row lg:items-center lg:gap-0'>
-                <li class='flex items-center text-white'>
-                    <Logo type='navbar' />
-                </li>
+                <Logo type='navbar' />
                 <li>
                     <Hyperlink
                         type='navbar-link'
@@ -30,19 +28,20 @@ export default function Navbar() {
             <hr class='block lg:hidden' />
             <ul class='flex flex-row-reverse items-center gap-2 lg:flex-row'>
                 {/* <li>
-                        <search>
-                            <input
-                                class='w-full px-3 py-2 text-black lg:rounded-lg'
-                                type='search'
-                                placeholder='Search'
-                            />
-                        </search>
-                    </li> */}
+                    <search class='rounded-md border border-neutral-300 focus:border-neutral-200'>
+                        <input
+                            class='w-full px-3 py-2 text-black lg:rounded-lg'
+                            type='search'
+                            placeholder='Search'
+                        />
+                    </search>
+                </li>
+                <li class='hidden text-neutral-300 lg:block'>|</li> */}
                 <li class='group relative ms-auto lg:m-0'>
                     <button class='peer flex h-[34px] w-[34px] items-center justify-center rounded-full bg-[#516490] p-2 text-white hover:opacity-[67.5%] group-focus-within:opacity-[67.5%]'>
                         G
                     </button>
-                    <div class='absolute left-[50%] top-full z-10 mt-[15px] hidden -translate-x-1/2 flex-col text-nowrap shadow group-focus-within:flex'>
+                    <div class='absolute -left-full top-full z-10 mt-[15px] hidden -translate-x-1/2 flex-col text-nowrap shadow group-focus-within:flex lg:left-1/2'>
                         <Hyperlink
                             type='navbar-dropdown'
                             href='https://oregon.public.law/users/sign_in'

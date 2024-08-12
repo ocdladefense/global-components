@@ -1,29 +1,20 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 /* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
-import { BaseElementLink } from './Base_Content';
+import BaseElementLink from './Base_Content';
 /* eslint-enable */
 
 export default function Social({ type }) {
-    let href;
-    let src;
-    let alt;
-
-    switch (type) {
-        case 'facebook':
-            href =
-                'https://facebook.com/OregonCriminalDefenseLawyersAssociation';
-            src =
-                'https://ocdla.org/wp-content/themes/wireframe/assets/images/default-facebook-icon.png';
-            alt = 'Facebook logo';
-            break;
-        case 'twitter':
-            href = 'https://twitter.com/oregondefense';
-            src =
-                'https://ocdla.org/wp-content/themes/wireframe/assets/images/default-twitter-icon.png';
-            alt = 'Twitter logo';
-            break;
-    }
+    // Default = 'facebook'
+    const href =
+        type === 'twitter'
+            ? 'https://twitter.com/oregondefense'
+            : 'https://facebook.com/OregonCriminalDefenseLawyersAssociation';
+    const src =
+        type === 'twitter'
+            ? 'https://ocdla.org/wp-content/themes/wireframe/assets/images/default-twitter-icon.png'
+            : 'https://ocdla.org/wp-content/themes/wireframe/assets/images/default-facebook-icon.png';
+    const alt = type === 'twitter' ? 'Twitter logo' : 'Facebook logo';
 
     return (
         <li>
