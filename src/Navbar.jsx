@@ -40,7 +40,7 @@ export default function Navbar() {
                             <Divider_Desktop />
                             <Button
                                 href='/'
-                                label='📁 Give Feedback'
+                                label='Give Feedback'
                             />
                         </ul>
                     </ul>
