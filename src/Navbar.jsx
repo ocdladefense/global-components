@@ -6,7 +6,7 @@ import Navlink from './Navlink';
 import { Divider_Mobile, Divider_Desktop } from './Dividers';
 import Search from './Search';
 import Profile from './Profile';
-import Feedback from './Feedback';
+import Button from './Button';
 /* eslint-enable */
 
 export default function Navbar() {
@@ -38,9 +38,9 @@ export default function Navbar() {
                                 label='G'
                             />
                             <Divider_Desktop />
-                            <Feedback
+                            <Button
                                 href='/'
-                                label='Give Feedback'
+                                label='📁 Give Feedback'
                             />
                         </ul>
                     </ul>

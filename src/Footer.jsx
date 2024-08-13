@@ -26,16 +26,23 @@ export default function Footer({
                                     <ul class='flex items-center gap-1'>
                                         <Logo />
                                         {showFacebook ? (
-                                            <Social show={showFacebook} />
+                                            <Social
+                                                type='facebook'
+                                                handle='OregonCriminalDefenseLawyersAssociation'
+                                            />
                                         ) : (
                                             <></>
                                         )}
                                         {showTwitter ? (
                                             <Social
-                                                show={showTwitter}
                                                 type='twitter'
+                                                handle='oregondefense'
                                             />
                                         ) : (
+                                            //                                             <Social
+                                            //     type='twitter'
+                                            //     handle='oregondefense'
+                                            // />
                                             <></>
                                         )}
                                     </ul>
