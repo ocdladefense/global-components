@@ -29,20 +29,22 @@ export default function Navbar() {
                 </li>
                 <Divider_Mobile />
                 <li class='size-full lg:ms-auto lg:size-max'>
-                    <ul class='flex flex-col-reverse items-start gap-4 p-4 lg:flex-row lg:items-center lg:gap-2 lg:p-0'>
-                        {/* <Search placeholder='Search' />
-                        <Divider_Desktop /> */}
-                        <ul class='flex size-full flex-row-reverse items-center gap-0 lg:flex-row lg:gap-2'>
-                            <Profile
-                                bg='bg-[#516490]'
-                                label='G'
-                            />
-                            <Divider_Desktop />
-                            <Button
-                                href='/'
-                                label='Give Feedback'
-                            />
-                        </ul>
+                    <ul class='flex flex-col items-start lg:flex-row lg:items-center'>
+                        <Search placeholder='Search' />
+                        <Divider_Desktop />
+                        <li class='size-full'>
+                            <ul class='flex flex-row-reverse items-center lg:flex-row'>
+                                <Profile
+                                    bg='bg-[#516490]'
+                                    label='G'
+                                />
+                                <Divider_Desktop />
+                                <Button
+                                    href='/'
+                                    label='Give Feedback'
+                                />
+                            </ul>
+                        </li>
                     </ul>
                 </li>
             </ul>

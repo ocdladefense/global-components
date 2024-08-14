@@ -6,12 +6,12 @@ import Dropdown from './Dropdown';
 
 export default function Profile({ bg, label }) {
     return (
-        <li class='group relative'>
-            {/* prettier-ignore */}
-            <button class={`${bg ? `${bg} ` : ''}peer flex h-[34px] w-[34px] items-center justify-center rounded-full p-2 text-white hover:opacity-[67.5%] group-focus-within:opacity-[67.5%]`}>
-                {label}
+        <li class='relative'>
+            <button class='group peer flex h-16 items-center p-4'>
+                {/* prettier-ignore */}
+                <div class={`${bg ? `${bg} ` : ''}h-[34px] w-[34px] flex items-center text-white justify-center rounded-full group-hover:opacity-[67.5%] focus-within:opacity-[67.5%]`}>{label}</div>
             </button>
-            <ul class='absolute -left-full top-full z-10 mt-[15px] hidden -translate-x-1/2 flex-col text-nowrap shadow group-focus-within:flex lg:left-1/2'>
+            <ul class='absolute left-[-1rem] top-[calc(100%+0.5rem)] z-10 hidden -translate-x-1/2 flex-col text-nowrap shadow peer-focus-within:flex lg:left-1/2'>
                 <Dropdown
                     href='https://oregon.public.law/users/sign_in'
                     label='Login'
