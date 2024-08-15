@@ -1,60 +1,61 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 /* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
-import Base_Element_Link from './Base_Content';
-// import abc from './icons';
-import twitter from './icons/twitter.png';
-import facebook from './icons/facebook.png';
+import Link from './Defaults';
 /* eslint-enable */
+// import abc from './images';
+import logo_facebook from './images/logo_facebook.png';
+import logo_twitter from './images/logo_twitter.png';
+import logo_youtube from './images/logo_youtube.png';
 
 export default function Social({ type, handle, src }) {
     // require.context('./', true, /\.(svg|png)$/gim);
 
     let domain;
+    let alt;
 
     handle = handle || '';
 
     // console.log(abc);
 
     switch (type) {
-        case 'twitter':
-        case 'x':
-            domain = 'https://x.com/';
-            src = src || twitter;
-            break;
         case 'facebook':
         case 'meta':
             domain = 'https://facebook.com/';
-            src = src || facebook;
+            src = src || logo_facebook;
+            alt = 'Facebook logo';
+            break;
+        case 'twitter':
+        case 'x':
+            domain = 'https://x.com/';
+            src = src || logo_twitter;
+            alt = 'Twitter logo';
             break;
         case 'youtube':
-            domain = 'https://youtube.com/loremipsumloremipsum';
-            domain = 'https://youtube.com/@abc';
+            domain = 'https://youtube.com/@';
+            // Temp
+            src = src || logo_youtube;
+            alt = 'YouTube logo';
             break;
         case 'reddit':
             domain = 'https://reddit.com/r/';
+            // TBD
+            src = src || logo_twitter;
+            alt = 'Reddit logo';
             break;
     }
 
-    // const src =
-    //     type === 'twitter'
-    //         ? 'https://ocdla.org/wp-content/themes/wireframe/assets/images/default-twitter-icon.png'
-    //         : 'https://ocdla.org/wp-content/themes/wireframe/assets/images/default-facebook-icon.png';
-    const alt = type === 'twitter' ? 'Twitter logo' : 'Facebook logo';
-
-    // r/abc
     const href = domain + handle;
-    // const src = './icons/' + type + '.png';
+    // const src = './images/' + type + '.png';
 
     return (
         <li>
-            <Base_Element_Link
+            <Link
                 classes='hover:opacity-[67.5%]'
                 href={href}
                 label={
                     <img
-                        class='size-8'
-                        // src={src}
+                        class='w-8'
                         src={src}
                         alt={alt}
                     />

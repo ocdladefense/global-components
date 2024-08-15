@@ -1,6 +1,7 @@
 /** @jsx vNode */
 /* eslint-disable-next-line no-unused-vars */
 import { vNode } from '@ocdla/view';
+import logo_ocdla from './images/logo_ocdla.png';
 
 export default function Logo({ type }) {
     // Default = 'footer'
@@ -14,7 +15,7 @@ export default function Logo({ type }) {
                 href='https://ocdla.org'>
                 <img
                     class='h-16'
-                    src='https://ocdla.org/wp-content/uploads/2019/10/cropped-ocdla-logo.png'
+                    src={logo_ocdla}
                 />
             </a>
         </li>

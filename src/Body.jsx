@@ -1,7 +1,7 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 /* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
-import Base_Element_Link from './Base_Content';
+import Link from './Defaults';
 import Folder from './Folder';
 /* eslint-enable */
 
@@ -68,7 +68,7 @@ export default function Body({ view, type, html_body_ors_viewer, test }) {
         <main
             id='body'
             class='flex w-full flex-col gap-4 p-4 lg:col-span-4 lg:col-start-2 lg:me-auto lg:border-x lg:p-8'>
-            {type === 'books-online' ? (
+            {type === 'books_online' ? (
                 <div class='flex flex-col gap-4'>
                     <h1 class='text-3xl font-bold'>
                         Felony Sentencing in Oregon: Guidelines, Statutes, Cases{' '}
@@ -83,7 +83,7 @@ export default function Body({ view, type, html_body_ors_viewer, test }) {
                     <h1 class='text-3xl font-bold'>Chapter 1 - Introduction</h1>
                     <p class='flex items-center gap-2'>
                         <div>Edited by:</div>{' '}
-                        <Base_Element_Link
+                        <Link
                             href='/'
                             label='Jesse Wm. Barton'
                         />
@@ -270,7 +270,7 @@ export default function Body({ view, type, html_body_ors_viewer, test }) {
                         2015.
                     </blockquote>
                 </div>
-            ) : type === 'ors-viewer' ? (
+            ) : type === 'ors_viewer' ? (
                 <>
                     <div>
                         <h1 class='text-4xl font-bold'>ORS 1.001</h1>
@@ -321,7 +321,7 @@ export default function Body({ view, type, html_body_ors_viewer, test }) {
                         <small>
                             <i>
                                 Source: Section 1.001 — State policy for courts,{' '}
-                                <Base_Element_Link
+                                <Link
                                     href='https://­oregonlegislature.­gov/bills_laws/ors/ors001.­html'
                                     label='https://­oregonlegislature.­gov/bills_laws/ors/ors001.­html'
                                 />

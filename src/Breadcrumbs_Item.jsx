@@ -1,13 +1,13 @@
 /** @jsx vNode */
 /* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
-import Base_Element_Link from './Base_Content';
+import Link from './Defaults';
 /* eslint-enable */
 
 export default function Breadcrumbs_Item({ href, label }) {
     return (
         <li>
-            <Base_Element_Link
+            <Link
                 href={href}
                 label={label}
             />
