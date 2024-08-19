@@ -5,7 +5,7 @@ import Base_Element_Link from "./Base_Content";
 
 export default function Outline({ children }) {
   return (
-    <aside class="hidden h-[87.5vh] overflow-scroll lg:block sticky top-0">
+    <aside class="hidden h-[87.5vh] overflow-y-scroll lg:block sticky top-0">
       {recursiveRender(children)}
     </aside>
   );
