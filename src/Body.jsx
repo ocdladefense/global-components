@@ -273,10 +273,12 @@ export default function Body({ view, type, html_body_ors_viewer, test }) {
             ) : type === 'ors_viewer' ? (
                 <>
                     <div>
-                        <h1 class='text-4xl font-bold'>ORS 1.001</h1>
-                        <p class='text-3xl font-thin'>
+                        <h3 class='text-5xl font-black tracking-tighter'>
+                            ORS 1.001
+                        </h3>
+                        <h6 class='text-2xl font-thin'>
                             State policy for courts
-                        </p>
+                        </h6>
                     </div>
                     <div class='flex flex-col gap-4'>
                         <ul class='flex'>
