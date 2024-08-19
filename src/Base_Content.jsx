@@ -11,7 +11,7 @@ export default function Base_Element_Link({
   classes = baseStyleLink,
   extraClasses,
   href,
-  label,
+  children,
   id,
 }) {
   return (
@@ -20,7 +20,7 @@ export default function Base_Element_Link({
       class={`${classes}${extraClasses ? ` ${extraClasses}` : ""}`}
       href={href || null}
     >
-      {label}
+      {children}
     </a>
   );
 }
