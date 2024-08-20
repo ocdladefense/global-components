@@ -23,7 +23,7 @@ export default function Navbar() {
                         <Navlink
                             active={true}
                             href='https://oregon.public.law/statutes'
-                            label='Oregon Revised Statutes'
+                            label='Oregon Revised TableOfContents'
                         />
                     </ul>
                 </li>
