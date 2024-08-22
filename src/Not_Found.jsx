@@ -1,10 +1,8 @@
-/** @jsx vNode */ /** @jsxFrag "Fragment" */
-/* eslint-disable no-unused-vars */
+/** @jsx vNode */
+/* eslint-disable-next-line no-unused-vars */
 import { vNode } from '@ocdla/view';
-import Button from '@ocdla/global-components/src/Button';
-/* eslint-enable */
 
-export default function Not_Found({}) {
+export default function Not_Found() {
     return (
         <div class='flex flex-col items-center gap-4 bg-black p-32 text-white'>
             <h1 class='text-center text-7xl font-black tracking-tighter'>

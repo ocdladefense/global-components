@@ -12,7 +12,7 @@ export default function Logo({ type }) {
         <li class={li}>
             <a
                 class={a}
-                href='https://ocdla.org'>
+                href='/'>
                 <img
                     class='h-16'
                     src={logo_ocdla}
