@@ -1,8 +1,10 @@
-/** @jsx vNode */ /** @jsxFrag "Fragment" */
+/** @jsx vNode */
 /* eslint-disable-next-line no-unused-vars */
 import { vNode } from '@ocdla/view';
 
 export default function Body({ body }) {
+    // console.log(body);
+
     return (
         <section
             id='body'
