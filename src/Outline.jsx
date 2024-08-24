@@ -18,7 +18,7 @@ function recursiveRender(children) {
         return (
           <>
             <Link
-              type="outline"
+              extraClasses="flex px-4 py-2"
               href={"#" + child.href}
               label={child.content}
               id={child.href + "-outline-item"}
