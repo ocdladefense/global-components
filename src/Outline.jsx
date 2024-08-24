@@ -12,10 +12,8 @@ export default function Outline({ children }) {
 }
 
 function recursiveRender(children) {
-  const level = children[0].level - 1;
-  const ulClass = "border-l ml-" + level * 2;
   return (
-    <ul class={ulClass}>
+    <ul class="border-l ml-4">
       {children.map((child) => {
         return (
           <>
