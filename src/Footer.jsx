@@ -1,7 +1,7 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 /* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
-import Base_Element_Link from './Base_Content';
+import Link from './Defaults';
 import Logo from './Logo';
 import Social from './Social';
 import Google_Maps from './Google_Maps';
@@ -10,12 +10,13 @@ import Google_Maps from './Google_Maps';
 export default function Footer({
     showFacebook,
     showTwitter,
+    showYouTube,
     useGoogleMapsIFrame
 }) {
     return (
         <footer class='container mx-auto border border-b-0 p-4 pb-16 lg:p-8 lg:pb-32'>
             {/* Resources */}
-            <ul class='flex flex-col gap-4 lg:gap-8'>
+            <ul class='flex flex-col gap-4'>
                 <li>
                     {/* Organization */}
                     <ul class='flex flex-col gap-4 lg:flex-row lg:gap-8'>
@@ -39,10 +40,14 @@ export default function Footer({
                                                 handle='oregondefense'
                                             />
                                         ) : (
-                                            //                                             <Social
-                                            //     type='twitter'
-                                            //     handle='oregondefense'
-                                            // />
+                                            <></>
+                                        )}
+                                        {showYouTube ? (
+                                            <Social
+                                                type='youtube'
+                                                handle='oregoncriminaldefenselawye4822'
+                                            />
+                                        ) : (
                                             <></>
                                         )}
                                     </ul>
@@ -70,14 +75,14 @@ export default function Footer({
                                 {/* Contact */}
                                 <li>
                                     <ul class='text-neutral-300'>
-                                        <Base_Element_Link
+                                        <Link
                                             href='https://ocdla.org'
                                             label='ocdla.org'
                                         />{' '}
                                         {!useGoogleMapsIFrame ? (
                                             <>
                                                 |{' '}
-                                                <Base_Element_Link
+                                                <Link
                                                     href='https://maps.app.goo.gl/7dCYKBEyJbmo8tzS7'
                                                     label='101 East 14th Ave, Eugene, OR 97401 '
                                                 />{' '}
@@ -86,12 +91,12 @@ export default function Footer({
                                             <></>
                                         )}
                                         |{' '}
-                                        <Base_Element_Link
+                                        <Link
                                             href='mailto:info@ocdla.org'
                                             label='info@ocdla.org'
                                         />{' '}
                                         |{' '}
-                                        <Base_Element_Link
+                                        <Link
                                             href='tel:+15416868716'
                                             label='(+1) 541-686-8716'
                                         />
@@ -109,19 +114,19 @@ export default function Footer({
                                             </p>
                                         </li>
                                         <li>
-                                            <Base_Element_Link
+                                            <Link
                                                 href='https://pubs.ocdla.org/directory/members'
                                                 label='Membership Directory'
                                             />
                                         </li>
                                         <li>
-                                            <Base_Element_Link
+                                            <Link
                                                 href='https://pubs.ocdla.org/directory/experts'
                                                 label='Expert Directory'
                                             />
                                         </li>
                                         <li>
-                                            <Base_Element_Link
+                                            <Link
                                                 href='/'
                                                 label='Online store'
                                             />
@@ -136,19 +141,19 @@ export default function Footer({
                                             </p>
                                         </li>
                                         <li>
-                                            <Base_Element_Link
+                                            <Link
                                                 href='https://pubs.ocdla.org/car/list'
                                                 label='Research Criminal Appellate Review'
                                             />
                                         </li>
                                         <li>
-                                            <Base_Element_Link
+                                            <Link
                                                 href='https://lod.ocdla.org/'
                                                 label='Library of Defense'
                                             />
                                         </li>
                                         <li>
-                                            <Base_Element_Link
+                                            <Link
                                                 href='https://lod.ocdla.org/Public:Subscriptions'
                                                 label='Books Online'
                                             />
@@ -163,19 +168,19 @@ export default function Footer({
                                             </p>
                                         </li>
                                         <li>
-                                            <Base_Element_Link
+                                            <Link
                                                 href='/'
                                                 label='CLEs'
                                             />
                                         </li>
                                         <li>
-                                            <Base_Element_Link
+                                            <Link
                                                 href='/'
                                                 label='Videos'
                                             />
                                         </li>
                                         <li>
-                                            <Base_Element_Link
+                                            <Link
                                                 href='/'
                                                 label='Seminars & Events'
                                             />

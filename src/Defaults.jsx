@@ -2,25 +2,21 @@
 /* eslint-disable-next-line no-unused-vars */
 import { vNode } from "@ocdla/view";
 
-// defaultLinkStyle
-export const baseStyleLink =
+export const defaultLinkStyle =
   "hover:underline-blue-500 text-blue-400 hover:opacity-[67.5%] hover:underline hover:underline-offset-2";
 
-// Link
-export default function Base_Element_Link({
-  classes = baseStyleLink,
+export default function Link({
+  classes = defaultLinkStyle,
   extraClasses,
   href,
-  children,
-  id,
+  label,
 }) {
   return (
     <a
-      id={id || null}
       class={`${classes}${extraClasses ? ` ${extraClasses}` : ""}`}
       href={href || null}
     >
-      {children}
+      {label}
     </a>
   );
 }

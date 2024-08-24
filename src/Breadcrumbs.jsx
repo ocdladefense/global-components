@@ -5,14 +5,20 @@ import { interleave } from "../lib.js";
 import BreadcrumbItem from "./BreadcrumbItem";
 /* eslint-enable */
 
-export default function Breadcrumbs({ items, separator }) {
+export default function Breadcrumbs({ crumbs = [] }) {
   return (
-    <section class="container mx-auto flex items-center border border-t-0 p-4 text-black lg:h-16">
+    <section class="flex items-center border border-t-0 p-4 text-black lg:h-16">
       <ul class="flex flex-wrap items-center whitespace-pre">
-        {interleave(
-          items.map((item) => <BreadcrumbItem {...item} />),
-          separator
-        )}
+        {crumbs.map((crumb, i) => {
+          const seperatorString = i !== crumbs.length - 1 ? " / " : " ";
+
+          return (
+            <>
+              <Breadcrumbs_Item {...crumb} />
+              {seperatorString}
+            </>
+          );
+        })}
       </ul>
     </section>
   );
