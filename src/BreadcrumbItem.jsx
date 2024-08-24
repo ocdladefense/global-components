@@ -1,13 +1,13 @@
 /** @jsx vNode */
 /* eslint-disable no-unused-vars */
 import { vNode } from "@ocdla/view";
-import Hyperlink from "./Hyperlink";
+import Link from "./Defaults";
 /* eslint-enable */
 
-export default function BreadcrumbItem({ text, href, type }) {
+export default function Breadcrumbs_Item({ href, label }) {
   return (
     <li>
-      <Hyperlink text={text} href={href} type={type} />
+      <Link href={href} label={label} />
     </li>
   );
 }

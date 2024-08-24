@@ -1,7 +1,6 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 /* eslint-disable no-unused-vars */
 import { vNode } from "@ocdla/view";
-import { interleave } from "../lib.js";
 import BreadcrumbItem from "./BreadcrumbItem";
 /* eslint-enable */
 
@@ -14,7 +13,7 @@ export default function Breadcrumbs({ crumbs = [] }) {
 
           return (
             <>
-              <Breadcrumbs_Item {...crumb} />
+              <BreadcrumbItem {...crumb} />
               {seperatorString}
             </>
           );
