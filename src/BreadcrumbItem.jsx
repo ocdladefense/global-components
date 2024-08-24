@@ -7,7 +7,7 @@ import Link from "./Defaults";
 export default function Breadcrumbs_Item({ href, label }) {
   return (
     <li>
-      <Link href={href} label={label} />
+      <Link href={href}>{label}</Link>
     </li>
   );
 }
