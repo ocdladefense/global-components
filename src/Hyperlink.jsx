@@ -7,6 +7,7 @@ export default function Hyperlink({
   href,
   extraClasses = "",
   type = "standard",
+  id,
 }) {
   const baseStyle =
     "hover:underline-blue-500 text-blue-400 hover:opacity-[67.5%] hover:underline hover:underline-offset-2";
@@ -47,7 +48,7 @@ export default function Hyperlink({
   }
 
   return (
-    <a class={`${classes}${extraClasses}`} href={href}>
+    <a class={`${classes}${extraClasses}`} href={href} id={id || null}>
       {children}
     </a>
   );
