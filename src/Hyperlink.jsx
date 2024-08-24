@@ -3,7 +3,7 @@
 import { vNode } from "@ocdla/view";
 
 export default function Hyperlink({
-  text,
+  children,
   href,
   extraClasses = "",
   type = "standard",
@@ -41,11 +41,14 @@ export default function Hyperlink({
     case "footer-social":
       classes = "hover:opacity-[67.5%]";
       break;
+    case "outline":
+      classes = "flex px-4 py-2";
+      break;
   }
 
   return (
     <a class={`${classes}${extraClasses}`} href={href}>
-      {text}
+      {children}
     </a>
   );
 }

@@ -1,7 +1,7 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 /* eslint-disable-next-line no-unused-vars */
 import { vNode } from "@ocdla/view";
-import Base_Element_Link from "./Base_Content";
+import Hyperlink from "./Hyperlink";
 
 export default function Outline({ children }) {
   return (
@@ -17,14 +17,14 @@ function recursiveRender(children) {
       {children.map((child) => {
         return (
           <>
-            <Base_Element_Link
-              extraClasses="flex px-4 py-2"
+            <Hyperlink
+              type="outline"
               href={"#" + child.href}
               label={child.content}
               id={child.href + "-outline-item"}
             >
               {child.content}
-            </Base_Element_Link>
+            </Hyperlink>
             {child.children.length > 0 ? recursiveRender(child.children) : ""}
           </>
         );

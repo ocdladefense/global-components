@@ -1,7 +1,12 @@
 /** @jsx vNode */
 /* eslint-disable no-unused-vars */
 import { vNode } from "@ocdla/view";
-import Hyperlink from "./Hyperlink";
+import Logo from "./Logo";
+import Navlink from "./Navlink";
+import { Divider_Mobile, Divider_Desktop } from "./Dividers";
+import Search from "./Search";
+import Profile from "./Profile";
+import Button from "./Button";
 /* eslint-enable */
 
 export default function Navbar() {
