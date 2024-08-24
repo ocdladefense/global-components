@@ -16,15 +16,15 @@ export default function Navbar() {
         <li class="size-full lg:size-max">
           <ul class="flex flex-col items-center lg:flex-row">
             <Logo type="navbar" />
-            <Navlink
-              href="https://oregon.public.law/rules"
-              label="Oregon Administrative Rules"
-            />
+            <Navlink href="https://oregon.public.law/rules">
+              Oregon Administrative Rules
+            </Navlink>
             <Navlink
               // href='https://oregon.public.law/statutes'
               href="/toc"
-              label="Oregon Revised Statutes"
-            />
+            >
+              Oregon Revised Statutes
+            </Navlink>
           </ul>
         </li>
         <Divider_Mobile />
