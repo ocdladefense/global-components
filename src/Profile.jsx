@@ -7,7 +7,9 @@ import Dropdown from './Dropdown';
 export default function Profile({ bg, label }) {
     return (
         <li class='relative'>
-            <button class='group peer flex h-16 items-center p-4'>
+            <button
+                class='group peer flex h-16 items-center p-4'
+                type='button'>
                 {/* prettier-ignore */}
                 <div class={`${bg ? `${bg} ` : ''}h-[34px] w-[34px] flex items-center text-white justify-center rounded-full group-hover:opacity-[67.5%] focus-within:opacity-[67.5%]`}>{label}</div>
             </button>

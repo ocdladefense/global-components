@@ -21,15 +21,21 @@ export default function Navbar() {
                             label='Oregon Administrative Rules'
                         />
                         <Navlink
-                            active={true}
-                            href='https://oregon.public.law/statutes'
+                            // href='https://oregon.public.law/statutes'
+                            href='/toc'
                             label='Oregon Revised Statutes'
                         />
                     </ul>
                 </li>
                 <Divider_Mobile />
                 <li class='size-full lg:ms-auto lg:size-max'>
-                    <ul class='flex flex-col items-start lg:flex-row lg:items-center'>
+                    <form
+                        class='m-4 flex flex-col items-start lg:m-0 lg:flex-row lg:items-center'
+                        onsubmit={e => {
+                            e.preventDefault();
+
+                            window.location.pathname = '/';
+                        }}>
                         <Search placeholder='Search' />
                         <Divider_Desktop />
                         <li class='size-full'>
@@ -41,11 +47,11 @@ export default function Navbar() {
                                 <Divider_Desktop />
                                 <Button
                                     href='/'
-                                    label='Give Feedback'
+                                    label='GIVE FEEDBACK'
                                 />
                             </ul>
                         </li>
-                    </ul>
+                    </form>
                 </li>
             </ul>
         </nav>

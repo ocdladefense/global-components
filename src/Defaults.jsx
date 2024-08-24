@@ -5,6 +5,9 @@ import { vNode } from '@ocdla/view';
 export const defaultLinkStyle =
     'hover:underline-blue-500 text-blue-400 hover:opacity-[67.5%] hover:underline hover:underline-offset-2';
 
+export const defaultButtonStyle =
+    'text-nowrap rounded-md border border-black bg-black px-3 py-2 font-bold text-white group-hover:bg-neutral-700 group-hover:bg-transparent';
+
 export default function Link({
     classes = defaultLinkStyle,
     extraClasses,
