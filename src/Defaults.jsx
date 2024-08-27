@@ -8,6 +8,9 @@ export const defaultLinkStyle =
 export const defaultButtonStyle =
   "text-nowrap rounded-md border border-black bg-black px-3 py-2 font-bold text-white group-hover:bg-neutral-700 group-hover:bg-transparent";
 
+export const defaultButtonStyle =
+    'text-nowrap rounded-md border border-black bg-black px-3 py-2 font-bold text-white';
+
 export default function Link({
   classes = defaultLinkStyle,
   extraClasses,
