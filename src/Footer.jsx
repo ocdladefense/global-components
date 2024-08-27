@@ -4,7 +4,7 @@ import { vNode } from "@ocdla/view";
 import Link from "./Defaults";
 import Logo from "./Logo";
 import Social from "./Social";
-import Google_Maps from "./Google_Maps";
+import Google_Maps from "./GoogleMaps";
 /* eslint-enable */
 
 export default function Footer({

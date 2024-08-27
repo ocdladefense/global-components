@@ -2,13 +2,7 @@
 /* eslint-disable-next-line no-unused-vars */
 import { vNode } from "@ocdla/view";
 
-export default function Sidebar_Item_Left({
-  active,
-  href,
-  heading,
-  label,
-  id,
-}) {
+export default function SidebarItemLeft({ active, href, heading, label, id }) {
   let a = "group hover:bg-neutral-100";
   let h = "text-blue-400 group-hover:text-blue-500 ";
   let p = "";

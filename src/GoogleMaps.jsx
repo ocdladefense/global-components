@@ -2,7 +2,7 @@
 /* eslint-disable-next-line no-unused-vars */
 import { vNode } from "@ocdla/view";
 
-export default function Google_Maps({ src }) {
+export default function GoogleMaps({ src }) {
   return (
     <li>
       <ul>
