@@ -1,7 +1,7 @@
 /** @jsx vNode */
 /* eslint-disable no-unused-vars */
-import { vNode } from '@ocdla/view';
-import Link from './Defaults';
+import { vNode } from "@ocdla/view";
+import Link from "./Defaults";
 /* eslint-enable */
 
 export default function Dropdown({ href, label }) {

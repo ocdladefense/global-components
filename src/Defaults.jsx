@@ -1,24 +1,30 @@
 /** @jsx vNode */
 /* eslint-disable-next-line no-unused-vars */
-import { vNode } from '@ocdla/view';
+import { vNode } from "@ocdla/view";
 
 export const defaultLinkStyle =
-    'hover:underline-blue-500 text-blue-400 hover:opacity-[67.5%] hover:underline hover:underline-offset-2';
+  "hover:underline-blue-500 text-blue-400 hover:opacity-[67.5%] hover:underline hover:underline-offset-2";
+
+export const defaultButtonStyle =
+  "text-nowrap rounded-md border border-black bg-black px-3 py-2 font-bold text-white group-hover:bg-neutral-700 group-hover:bg-transparent";
 
 export const defaultButtonStyle =
     'text-nowrap rounded-md border border-black bg-black px-3 py-2 font-bold text-white';
 
 export default function Link({
-    classes = defaultLinkStyle,
-    extraClasses,
-    href,
-    label
+  classes = defaultLinkStyle,
+  extraClasses,
+  href,
+  children,
+  id,
 }) {
-    return (
-        <a
-            class={`${classes}${extraClasses ? ` ${extraClasses}` : ''}`}
-            href={href || null}>
-            {label}
-        </a>
-    );
+  return (
+    <a
+      id={id || null}
+      class={`${classes}${extraClasses ? ` ${extraClasses}` : ""}`}
+      href={href || null}
+    >
+      {children}
+    </a>
+  );
 }

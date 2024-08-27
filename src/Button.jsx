@@ -1,5 +1,3 @@
-/** @jsx vNode */
-/* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
 import { defaultButtonStyle } from '@ocdla/global-components/src/Defaults';
 /* eslint-enable */
