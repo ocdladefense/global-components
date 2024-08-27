@@ -4,7 +4,7 @@ import { vNode } from "@ocdla/view";
 import Link from "./Defaults";
 /* eslint-enable */
 
-export default function Breadcrumbs_Item({ href, label }) {
+export default function BreadcrumbItem({ href, label }) {
   return (
     <li>
       <Link href={href}>{label}</Link>
