@@ -9,9 +9,9 @@ export default function Folder({ href, label }) {
         <li>
             <Link
                 classes='border border-blue-600 hover:opacity-[67.5%] text-blue-600 px-4 py-2 rounded-md contrast-[0] saturate-0'
-                href={href}
-                label={label}
-            />
+                href={href}>
+                {label}
+            </Link>
         </li>
     );
 }
