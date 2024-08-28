@@ -1,7 +1,8 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
-/* eslint-disable-next-line no-unused-vars */
+/* eslint-disable no-unused-vars */
 import { vNode } from '@ocdla/view';
 import Link from './Defaults';
+/* eslint-enable */
 
 export default function Outline({ children }) {
     return (
