@@ -3,7 +3,7 @@
 import { vNode } from '@ocdla/view';
 import Logo from './Logo';
 import Navlink from './Navlink';
-import { Divider_Mobile, Divider_Desktop } from './Dividers';
+import { DividerMobile, DividerDesktop } from './Dividers';
 import Search from './Search';
 import Profile from './Profile';
 import Button from './Button';
@@ -26,7 +26,7 @@ export default function Navbar() {
                         </Navlink>
                     </ul>
                 </li>
-                <Divider_Mobile />
+                <DividerMobile />
                 <li class='size-full lg:ms-auto lg:size-max'>
                     <form
                         class='m-4 flex flex-col items-start lg:m-0 lg:flex-row lg:items-center'
@@ -36,14 +36,14 @@ export default function Navbar() {
                             window.location.pathname = '/';
                         }}>
                         <Search placeholder='Search' />
-                        <Divider_Desktop />
+                        <DividerDesktop />
                         <li class='size-full'>
                             <ul class='flex flex-row-reverse items-center lg:flex-row'>
                                 <Profile
                                     bg='bg-[#516490]'
                                     label='G'
                                 />
-                                <Divider_Desktop />
+                                <DividerDesktop />
                                 <Button
                                     href='/'
                                     label='GIVE FEEDBACK'
