@@ -3,10 +3,10 @@
 import { vNode } from '@ocdla/view';
 import logo_ocdla from './images/logo_ocdla.png';
 
-export default function Logo({ type }) {
+export default function Logo({ typeNavbar }) {
     // Default = 'footer'
-    const li = type === 'navbar' ? 'size-full' : '';
-    const a = type === 'navbar' ? 'flex p-4' : '';
+    const li = typeNavbar ? 'size-full' : '';
+    const a = typeNavbar ? 'flex px-4' : '';
 
     return (
         <li class={li}>

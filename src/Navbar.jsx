@@ -15,7 +15,7 @@ export default function Navbar() {
             <ul class='flex size-full flex-col items-start lg:flex-row lg:items-center'>
                 <li class='size-full lg:size-max'>
                     <ul class='flex flex-col items-center lg:flex-row'>
-                        <Logo type='navbar' />
+                        <Logo typeNavbar={true} />
                         <Navlink href='https://oregon.public.law/rules'>
                             Oregon Administrative Rules
                         </Navlink>
