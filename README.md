@@ -1,6 +1,3 @@
 # global-components
 
-### Useful Resources
-
--   https://codebeautify.org/json-fixer
--   https://codebeautify.org/remove-empty-lines
+-   A library of reusable, JSX components, that can be incorporated into any Node project.
