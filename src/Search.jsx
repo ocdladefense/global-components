@@ -3,9 +3,10 @@
 import { vNode } from '@ocdla/view';
 import { defaultButtonStyle } from '@ocdla/global-components/src/Defaults';
 
-export default function Search({ placeholder }) {
+export default function Search({ typeNavbar, placeholder }) {
+    // prettier-ignore
     return (
-        <li class='flex size-full justify-center'>
+        <li class={`${typeNavbar ? 'px-4 lg:p-4 ' : ''}flex size-full justify-center`}>
             <input
                 class='size-full rounded-l-md border border-neutral-300 px-3 py-2 focus:border-neutral-200'
                 type='search'

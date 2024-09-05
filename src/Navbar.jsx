@@ -35,7 +35,10 @@ export default function Navbar() {
 
                             window.location.pathname = '/';
                         }}>
-                        <Search placeholder='Search' />
+                        <Search
+                            typeNavbar={true}
+                            placeholder='Search'
+                        />
                         <DividerDesktop />
                         <li class='size-full'>
                             <ul class='flex flex-row-reverse items-center lg:flex-row'>
