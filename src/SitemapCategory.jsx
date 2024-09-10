@@ -6,7 +6,7 @@ import Link from "@ocdla/global-components/src/Defaults";
 // [{title: "SERVICES", links: [{href="/", label: "Membership Directory"}, {} ]}, {}]
 export default function SitemapCategory({ title, path, labels, hrefs }) {
     // Split our labels and hrefs into arrays
-    labels = labels.replace(" ", "").split(",");
+    labels = labels.split(",");
     hrefs = hrefs.replace(" ", "").split(",");
 
     // Remove trailing '/' if there is one.
@@ -25,7 +25,7 @@ export default function SitemapCategory({ title, path, labels, hrefs }) {
                     {hrefs.map((href, i) => (
                         <li>
                             <Link href={href[0] == "/" ? path + href : href}>
-                                {labels[i]}
+                                {labels[i].trim()}
                             </Link>
                         </li>
                     ))}
