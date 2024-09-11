@@ -4,16 +4,13 @@ import { vNode } from "@ocdla/view";
 import SocialItem from "./SocialItem";
 /* eslint-enable */
 
-export default function Social({ platforms, handles }) {
-    platforms = platforms.replaceAll(" ", "").split(",");
-    handles = handles.replaceAll(" ", "").split(",");
+export default function Social(props) {
+    // Remove the extra children from the original props
+    delete props.children; 
     return (
         <ul class="flex items-center gap-1">
-            {platforms.map((platform, i) => (
-                <SocialItem
-                    type={platform}
-                    handle={handles[i]}
-                />
+            {Object.entries(props).map(([platform, handle]) => (
+                <SocialItem type={platform} handle={handle} />
             ))}
         </ul>
     );

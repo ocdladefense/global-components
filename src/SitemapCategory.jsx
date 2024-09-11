@@ -4,10 +4,12 @@ import Link from "@ocdla/global-components/src/Defaults";
 
 // <li class="size-full"> This was wrapping the entire return. We may need to keep size-full when using this.
 // [{title: "SERVICES", links: [{href="/", label: "Membership Directory"}, {} ]}, {}]
-export default function SitemapCategory({ title, path, labels, hrefs }) {
-    // Split our labels and hrefs into arrays
-    labels = labels.split(",");
-    hrefs = hrefs.replace(" ", "").split(",");
+export default function SitemapCategory(props) {
+    const title = props.title;
+    let path = props.path;
+    delete props.title;
+    delete props.path;
+    delete props.children;
 
     // Remove trailing '/' if there is one.
     path = path.at(-1) == "/" ? path.slice(0, -1) : path;
@@ -22,10 +24,10 @@ export default function SitemapCategory({ title, path, labels, hrefs }) {
                         </p>
                     </li>
                     {/* Links in each category */}
-                    {hrefs.map((href, i) => (
+                    {Object.entries(props).map(([label, href]) => (
                         <li>
                             <Link href={href[0] == "/" ? path + href : href}>
-                                {labels[i].trim()}
+                                {label.replaceAll("_", " ")}
                             </Link>
                         </li>
                     ))}
