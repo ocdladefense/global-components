@@ -1,9 +1,8 @@
 /** @jsx vNode */
 /* eslint-disable-next-line no-unused-vars */
 import { vNode } from '@ocdla/view';
-import logo_ocdla from './images/logo_ocdla.png';
 
-export default function Logo({ typeNavbar }) {
+export default function Logo({ typeNavbar, src }) {
     // Default = 'footer'
     const li = typeNavbar ? 'size-full' : '';
     const a = typeNavbar ? 'flex px-4' : '';
@@ -15,7 +14,7 @@ export default function Logo({ typeNavbar }) {
                 href='/'>
                 <img
                     class='h-16'
-                    src={logo_ocdla}
+                    src={src}
                 />
             </a>
         </li>
