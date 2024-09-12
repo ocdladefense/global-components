@@ -4,7 +4,7 @@ import { vNode } from '@ocdla/view';
 import Dropdown from './Dropdown';
 /* eslint-enable */
 
-export default function Profile({ bg, label }) {
+export default function Profile({ bg, label, loginUrl}) {
     return (
         <li class='relative'>
             <button
@@ -15,7 +15,7 @@ export default function Profile({ bg, label }) {
             </button>
             <ul class='absolute left-[-1rem] top-[calc(100%+0.5rem)] z-10 hidden -translate-x-1/2 flex-col text-nowrap shadow peer-focus-within:flex lg:left-1/2'>
                 <Dropdown
-                    href='https://oregon.public.law/users/sign_in'
+                    href={loginUrl}
                     label='Login'
                 />
             </ul>
