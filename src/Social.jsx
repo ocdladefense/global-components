@@ -8,7 +8,7 @@ export default function Social(props) {
     // Remove the extra children from the original props
     delete props.children; 
     return (
-        <ul class="flex items-center gap-1">
+        <ul class="flex items-center gap-2">
             {Object.entries(props).map(([platform, handle]) => (
                 <SocialItem type={platform} handle={handle} />
             ))}
