@@ -2,17 +2,17 @@
 /* eslint-disable-next-line no-unused-vars */
 import { vNode } from '@ocdla/view';
 
-export default function Logo({ size, src }) {
+export default function Logo({ className, src }) {
     // Default = 'footer'
-    const a = size ? 'flex px-4' : '';
+    className = className || "flex px-4";
 
     return (
-            <a
-                class={a}
-                href='/'>
-                <img
-                    src={src}
-                />
-            </a>
-  );
+        <a
+            class={className}
+            href='/'>
+            <img
+                src={src}
+            />
+        </a>
+    );
 }
