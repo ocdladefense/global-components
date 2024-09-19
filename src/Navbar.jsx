@@ -11,7 +11,7 @@ import Button from './Button';
 
 export default function Navbar() {
     return (
-        <nav class='flex flex-col border border-0 border-b lg:h-16 lg:flex-row lg:border lg:border-t-0'>
+        <nav class='flex flex-col border border-0 border-b lg:h-16 lg:flex-row lg:border-t-0'>
             <ul class='flex size-full flex-col items-start lg:flex-row lg:items-center'>
                 <li class='size-full lg:size-max'>
                     <ul class='flex flex-col items-center lg:flex-row'>
@@ -19,13 +19,11 @@ export default function Navbar() {
                         <Navlink href='https://oregon.public.law/rules'>
                             Oregon Administrative Rules
                         </Navlink>
-                        <Navlink
-                            // href='https://oregon.public.law/statutes'
-                            href='/toc'>
+                        <Navlink href='/toc'>
                             Oregon Revised Statutes
                         </Navlink>
                     </ul>
-                </li>
+                </li>  
                 <DividerMobile />
                 <li class='size-full lg:ms-auto lg:size-max'>
                     <form
