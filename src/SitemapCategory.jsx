@@ -6,8 +6,11 @@ import Link from "@ocdla/global-components/src/Defaults";
 // [{title: "SERVICES", links: [{href="/", label: "Membership Directory"}, {} ]}, {}]
 export default function SitemapCategory(props) {
     const title = props.title;
+    const className = props.className || null;
     let path = props.path;
+
     delete props.title;
+    delete props.className;
     delete props.path;
     delete props.children;
 
@@ -19,14 +22,14 @@ export default function SitemapCategory(props) {
                 <ul class="flex flex-col gap-1">
                     {/* Category title */}
                     <li>
-                        <p class="text-base font-bold">
+                        <p class={`text-base font-bold ${className}`}>
                             <a href="{path}">{title}</a>
                         </p>
                     </li>
                     {/* Links in each category */}
                     {Object.entries(props).map(([label, href]) => (
                         <li>
-                            <a href={href[0] == "/" ? path + href : href}>
+                            <a href={href[0] == "/" ? path + href : href} class={className}>
                                 {label.replaceAll("_", " ")}
                             </a>
                         </li>
