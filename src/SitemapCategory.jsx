@@ -20,15 +20,15 @@ export default function SitemapCategory(props) {
                     {/* Category title */}
                     <li>
                         <p class="text-base font-bold">
-                            <Link href="{path}">{title}</Link>
+                            <a href="{path}">{title}</a>
                         </p>
                     </li>
                     {/* Links in each category */}
                     {Object.entries(props).map(([label, href]) => (
                         <li>
-                            <Link href={href[0] == "/" ? path + href : href}>
+                            <a href={href[0] == "/" ? path + href : href}>
                                 {label.replaceAll("_", " ")}
-                            </Link>
+                            </a>
                         </li>
                     ))}
                 </ul>

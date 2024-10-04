@@ -9,6 +9,7 @@ import logo_twitter from "./images/logo_twitter.png";
 import logo_youtube from "./images/logo_youtube.png";
 import fa_facebook from "./images/fa_facebook.png";
 import fa_instagram from "./images/fa_instagram.png";
+import fa_instagram_solid from "./images/fa_instagram_solid.png";
 
 export default function SocialItem({ type, handle, src }) {
     // require.context('./', true, /\.(svg|png)$/gim);
@@ -37,6 +38,11 @@ export default function SocialItem({ type, handle, src }) {
         case "fa-instagram":
             domain = "https://instagram.com/";
             src = src || fa_instagram;
+            alt = "Instagram logo";
+            break;
+        case "instagram-solid":
+            domain = "https://instagram.com/";
+            src = src || fa_instagram_solid;
             alt = "Instagram logo";
             break;
         case "twitter":
