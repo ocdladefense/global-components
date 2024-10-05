@@ -6,9 +6,9 @@ import SocialItem from "./SocialItem";
 
 export default function Social(props) {
     // Remove the extra children from the original props
-    delete props.children; 
+    delete props.children;
     return (
-        <ul class="flex items-center gap-2">
+        <ul class="social flex items-center gap-2">
             {Object.entries(props).map(([platform, handle]) => (
                 <SocialItem type={platform} handle={handle} />
             ))}
