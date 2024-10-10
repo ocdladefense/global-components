@@ -8,17 +8,9 @@ export default function Search({ typeNavbar, placeholder }) {
     return (
         <li class={`${typeNavbar ? 'px-4 lg:p-4 ' : ''}flex size-full justify-center`}>
             <input
-<<<<<<< Updated upstream
-                class='size-full rounded-l-md border border-neutral-300 px-3 py-2 focus:border-neutral-200'
-=======
-<<<<<<< Updated upstream
-                class='rounded-md border border-neutral-300 px-4 py-2 focus:border-neutral-200'
-=======
                 name="reference" id="reference" class='size-full rounded-l-md border border-neutral-300 px-3 py-2 focus:border-neutral-200'
->>>>>>> Stashed changes
->>>>>>> Stashed changes
                 type='search'
-                placeholder={placeholder}
+                placeholder='e.g., 142.020(2)'
             />
             <button class={`${defaultButtonStyle} rounded-l-none`}>GO</button>
         </li>
