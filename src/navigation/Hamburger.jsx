@@ -7,7 +7,7 @@ export default function Hamburger() {
     return (
         <div
             style="float:right; margin-right:15px;" id="toggle-menu"
-            class="tablet:hidden place-content-center mx-auto"
+            class="tablet:hidden mx-auto inline-block cursor-pointer leading-8"
         >
             <div
                 class="hamburgler inline-block w-3 h-1 bg-menu rounded-full transition-all duration-150 before:content-[''] before:absolute before:w-5 before:h-1 before:bg-menu before:rounded-full before:-translate-y-2 before:transition-all before:duration-150 after:content-[''] after:absolute after:w-4 after:h-1 after:bg-menu after:rounded-full after:translate-y-2 after:transition-all after:duration-150"
