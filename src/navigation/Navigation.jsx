@@ -1,6 +1,6 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 import { vNode, View } from "@ocdla/view";
-
+import Hamburger from "./Hamburger";
 
 export default function Navigation({routes}) {
 
@@ -30,6 +30,7 @@ export default function Navigation({routes}) {
     });
 
     return (
+        <>
         <nav class="ml-4 inline-block tablet:px-8">
 
 
@@ -40,14 +41,18 @@ export default function Navigation({routes}) {
             </ul>
 
 
-            <ul id="mobile-menu" class="block hidden min-h-[100vh] pt-[15vh]">
+        </nav>
+<Hamburger />
+<nav id="mobile-menu" class="block hidden min-h-[100vh] pt-[15vh]">
+
+            <ul >
 
 
                 {all}
 
             </ul>
 
-
         </nav>
+        </>
     );
 }
