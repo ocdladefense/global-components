@@ -1,6 +1,6 @@
 /** @jsx vNode */ /** @jsxFrag "Fragment" */
 import { vNode, View } from "@ocdla/view";
-import Hamburger from "./Hamburger";
+
 
 export default function Navigation({routes}) {
 
@@ -30,24 +30,14 @@ export default function Navigation({routes}) {
     });
 
     return (
-        <nav class="tablet:px-8">
+        <nav class="ml-4 inline-block tablet:px-8">
 
 
             <ul class="inline-block">
 
-                <li style="vertical-align:middle;" class="inline-block p-2">
-                    <a href="/">
-                        <img style="inline-block vertical-align:middle;" width="30" height="30" src="../images/logos/logo.svg" />
-                    </a>
-                </li>
-
                 {top}
 
             </ul>
-
-
-
-            <Hamburger />
 
 
             <ul id="mobile-menu" class="block hidden min-h-[100vh] pt-[15vh]">
