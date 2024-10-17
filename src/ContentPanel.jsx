@@ -3,7 +3,7 @@ import { vNode, View } from "@ocdla/view";
 export default function TwoColumnPanel({ heading, children, striped = false }) {
 
     return (
-        <section style="position:relative;" class={`fullscreen bg-sunshine laptop:min-w-[800px] p-8 gap-0 tablet:place-items-start mb-16 tablet:my-22`}>
+        <section style="position:relative;" class={`fullscreen bg-default-background laptop:min-w-[800px] p-8 gap-0 tablet:place-items-start mb-16 tablet:my-22`}>
 
 
             <div class="container tablet:max-w-[90%] laptop:max-w-[80%] tablet:mx-auto">
