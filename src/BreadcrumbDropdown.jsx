@@ -3,11 +3,10 @@
 import { vNode } from '@ocdla/view';
 /* eslint-enable */
 
-export default function BreadcrumbDropdown({ href, label, entries }) {
-    const dropdownName = `breadcrumb-list-${label}`;
+export default function BreadcrumbDropdown({ href, entries }) {
     return (
         <li>
-            <select name={dropdownName} id={dropdownName} className="max-w-[400px]">
+            <select name='breadcrumbs-dropdown' id='breadcrumbs-dropdown' className="max-w-[400px]">
                 {entries.map((item) => {
                     const selected = item.href === href;
                     if (selected) {
